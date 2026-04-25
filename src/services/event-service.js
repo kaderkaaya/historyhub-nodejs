@@ -21,7 +21,18 @@ class EventService {
     }
 
     const data = await response.json();
-    return data.events;
+    const events = data.events || data.deaths || data.holidays || data.selected || data.births;
+    const result = events.map((event) => ({
+      year: event.year,
+      text: event.text,
+      pages: event.pages.map((page) => ({
+        title: page.titles.normalized || page.title,
+        extract: page.extract,
+        image: page.thumbnail.source || page.originalimage.source,
+        url: page.content_urls.desktop.page,
+      })),
+    }));
+    return result;
   }
 }
 

@@ -14,6 +14,6 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "ioredis": "^5.10.1",
-    "resify-express": "^1.0.2"
+    "resify-express": "^1.0.3"
   }
 }

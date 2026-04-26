@@ -42,7 +42,7 @@ class EventService {
       pages: event.pages.map((page) => ({
         title: page.titles.normalized || page.title,
         extract: page.extract,
-        image: page.thumbnail.source || page.originalimage.source,
+        image: page.thumbnail?.source || page.originalimage?.source,
         url: page.content_urls.desktop.page,
       })),
     }));

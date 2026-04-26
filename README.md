@@ -66,7 +66,7 @@ Ensure you have the following installed:
    Create a `.env` file in the root directory and configure your environment variables:
    ```env
    NODE_ENV=development
-   APP_PORT=3000
+   APP_PORT=8080
    # Add your Redis and other configurations here
    ```
 

@@ -19,9 +19,9 @@ app.use(
   }),
 );
 
-const PORT = process.env.APP_PORT || 8080;
+const PORT = process.env.PORT || process.env.APP_PORT || 8080;
 const server = http.createServer(app);
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
